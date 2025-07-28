@@ -36,3 +36,84 @@ body.jw-modal-open {
     /* body overflow is hidden to hide main scrollbar when modal window is open */
     overflow: hidden;
 }
+
+.book-card {
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        width: 300px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        margin: 20px;
+        background: white;
+        position: relative;
+}
+        
+.book-header {
+        background: #2c3e50;
+        color: white;
+        padding: 15px;
+        position: relative;
+}
+        
+.book-title {
+        margin: 0;
+        font-size: 1.5rem;
+        padding-right: 25px;
+}
+
+.book-author {
+        margin: 5px 0 0;
+        font-size: 1rem;
+        font-weight: normal;
+        font-style: italic;
+}
+
+.book-body {
+        padding: 15px;
+}
+
+.book-description {
+        color: #555;
+        line-height: 1.5;
+        margin-bottom: 15px;
+}
+
+.book-meta {
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid #eee;
+        padding-top: 10px;
+        color: #666;
+}
+
+.read-status {
+        color: #27ae60;
+        font-weight: bold;
+}
+
+.not-read {
+        color: #e74c3c;
+}
+
+.trash-icon {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        transition: all 0.2s;
+}
+
+.trash-icon:hover {
+        transform: scale(1.1);
+        fill: #ff6b6b;
+}
+
+.trash-icon:active {
+        transform: scale(0.9);
+}
+
+.read-status:hover {
+		font-size: 18px;
+}
