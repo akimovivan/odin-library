@@ -57,11 +57,49 @@ function updateState() {
     renderLibrary();
 }
 
+// open modal by id
+function openModal(id) {
+    document.getElementById('modal').classList.add('open');
+    document.body.classList.add('jw-modal-open');
+}
+
+// close currently open modal
+function closeModal() {
+    document.querySelector('.jw-modal.open').classList.remove('open');
+    document.body.classList.remove('jw-modal-open');
+}
+
+window.addEventListener('load', function () {
+});
 document.addEventListener("DOMContentLoaded", () => {
     libEl = document.getElementById("libraryList");
-    addBookToLibrary("sas", "velik", "", 13, false);
-    addBookToLibrary("sas", "velik", "", 13, false);
-    addBookToLibrary("sas", "velik", "", 13, false);
+    const form = document.getElementById("addNewBookForm");
+    // addBookToLibrary("sas", "velik", "", 13, false);
+    // addBookToLibrary("sas", "velik", "", 13, false);
+    // addBookToLibrary("sas", "velik", "", 13, false);
 
     renderLibrary();
+
+    // close modals on background click
+    document.addEventListener('click', event => {
+        if (event.target.classList.contains('jw-modal')) {
+            closeModal();
+        }
+    });
+
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        addBookToLibrary(
+            form.elements.author.value,
+            form.elements.title.value,
+            form.elements.info.value,
+            form.elements.pages.value,
+            false,
+        )
+        form.reset();
+        closeModal();
+    })
 });
+
+
