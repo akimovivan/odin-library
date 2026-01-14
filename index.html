@@ -1,40 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title></title>
-        <link href="styles.css" rel="stylesheet">
-        <script defer src="script.js"></script>
-    </head>
-    <body>
-        <div id="newBookContainer">
-            <button onclick="openModal()">New book</button>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <link href="styles.css" rel="stylesheet" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div id="newBookContainer">
+      <button onclick="openModal()">New book</button>
+    </div>
 
-        <div id="libraryList">
-        </div>
+    <div id="libraryList"></div>
 
-        <div id="modal" class="jw-modal">
-            <div class="jw-modal-body">
-                <h1>Add a new book to library</h1>
-                <form id="addNewBookForm">
-                    <label for="title">Title:</label>
-                    <input type="text" name="title" value=""><br>
+    <div id="modal" class="jw-modal">
+      <div class="jw-modal-body">
+        <h1>Add a new book to library</h1>
+        <form id="addNewBookForm">
+          <label for="title">Title:</label>
+          <input id="title" type="text" name="title" value="" required /><br />
 
-                    <label for="author">Author:</label>
-                    <input type="text" name="author" value=""><br>
+          <label for="author">Author:</label>
+          <input type="text" name="author" value="" /><br />
 
-                    <label for="pages">Number of pages:</label>
-                    <input type="number" name="pages" min="0" max="10000"><br>
+          <label for="pages">Number of pages:</label>
+          <input type="number" name="pages" min="0" max="10000" /><br />
 
-                    <label for="info">Description:</label>
-                    <textarea rows="3" cols="60" name="info"></textarea><br><br>
+          <label for="info">Description:</label>
+          <textarea rows="3" cols="60" name="info"></textarea><br /><br />
 
-                    <input type="submit" value="Submit">
-                    <button type="button" onclick="closeModal()">Close</button>
-                </form>
-            </div>
-        </div>
-    </body>
+          <input type="submit" value="Submit" />
+          <button type="button" onclick="closeModal()">Close</button>
+        </form>
+      </div>
+    </div>
+  </body>
 </html>
